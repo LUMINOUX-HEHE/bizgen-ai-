@@ -1,0 +1,81 @@
+spring:
+  profiles:
+    active: openrouter
+  application:
+    name: bizgen-ai
+    version: 1.0.0
+
+  datasource:
+    url: jdbc:h2:file:./data/bizgenai;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    default-property-inclusion: non_null
+    date-format: yyyy-MM-dd'T'HH:mm:ss'Z'
+
+server:
+  port: 8081
+  error:
+    include-message: always
+    include-binding-errors: always
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+
+bizgen:
+  blueprints:
+    path: classpath:blueprints/
+  domain-knowledge:
+    path: classpath:domain-knowledge/
+  generation:
+    default-variation-count: 3
+    max-variation-count: 5
+    timeout-seconds: 30
+  cors:
+    allowed-origins: http://localhost:5173,http://localhost:3000
+  ai:
+    provider: openrouter
+    model: meta-llama/llama-3.3-70b-instruct:free
+    # API key can be set via environment variable: BIZGEN_AI_API_KEY
+    # If not set, the system will fall back to MockAiService
+    api-key: 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
+    base-url: https://openrouter.ai/api/v1
+    timeout-seconds: 60
+    max-retries: 3
+    # Enable fallback to MockAiService when primary service fails
+    enable-fallback: true
+
+logging:
+  level:
+    com.bizgenai: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG

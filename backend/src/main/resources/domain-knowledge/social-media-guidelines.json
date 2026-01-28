@@ -1,0 +1,74 @@
+{
+  "id": "social-media-guidelines",
+  "version": "1.0.0",
+  "description": "Platform-specific guidelines and best practices for social media content",
+  "platforms": {
+    "instagram": {
+      "characterLimit": 2200,
+      "hashtagLimit": 30,
+      "recommendedHashtags": "5-10",
+      "features": ["Stories", "Reels", "Carousel", "Live"],
+      "tone": "Visual, aspirational, authentic",
+      "doNot": [
+        "Use too many hashtags in caption body",
+        "Post without visual content",
+        "Ignore comments"
+      ]
+    },
+    "facebook": {
+      "characterLimit": 63206,
+      "optimalLength": "40-80 words",
+      "features": ["Stories", "Groups", "Events", "Live"],
+      "tone": "Friendly, community-focused",
+      "doNot": [
+        "Post only promotional content",
+        "Ignore negative comments",
+        "Over-post (more than 2/day)"
+      ]
+    },
+    "linkedin": {
+      "characterLimit": 3000,
+      "optimalLength": "150-300 words",
+      "features": ["Articles", "Newsletters", "Events"],
+      "tone": "Professional, insightful, authentic",
+      "doNot": [
+        "Be overly casual",
+        "Share controversial political views",
+        "Only self-promote"
+      ]
+    },
+    "twitter": {
+      "characterLimit": 280,
+      "features": ["Threads", "Spaces", "Polls"],
+      "tone": "Concise, witty, timely",
+      "doNot": [
+        "Use more than 2 hashtags",
+        "Ignore trending topics",
+        "Be tone-deaf to current events"
+      ]
+    }
+  },
+  "universalGuidelines": {
+    "engagement": {
+      "respondQuickly": "Reply within 1-2 hours during business hours",
+      "beAuthentic": "Show personality while staying professional",
+      "addValue": "Every post should inform, entertain, or inspire"
+    },
+    "contentMix": {
+      "rule": "80/20 - 80% valuable content, 20% promotional",
+      "variety": "Mix formats: images, videos, text, stories"
+    },
+    "accessibility": {
+      "altText": "Always add alt text to images",
+      "captions": "Include captions on videos",
+      "readability": "Use clear, simple language"
+    }
+  },
+  "prohibitedContent": [
+    "Misleading claims",
+    "Undisclosed sponsored content",
+    "Hate speech or discrimination",
+    "Privacy violations",
+    "Copyright infringement"
+  ]
+}

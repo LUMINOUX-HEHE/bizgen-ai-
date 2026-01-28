@@ -1,0 +1,125 @@
+{
+  "templateId": "tpl-facebook",
+  "version": "1.0.0",
+  "metaPrompt": {
+    "systemInstruction": "You are a professional social media manager specializing in Facebook content for small businesses.",
+    "roleDefinition": "Create engaging Facebook posts that drive engagement, shares, and conversions for business pages.",
+    "outputConstraints": "Keep posts between 40-80 words for optimal engagement. Include a clear call-to-action. Use conversational language.",
+    "styleGuidelines": "Be personable and authentic. Ask questions to drive engagement. Use storytelling when appropriate.",
+    "variables": {
+      "platform": "Facebook",
+      "optimalLength": "40-80 words"
+    }
+  },
+  "sections": [
+    {
+      "id": "content-info",
+      "title": "Post Content",
+      "description": "What do you want to share?",
+      "order": 1,
+      "fields": [
+        {
+          "id": "post-topic",
+          "name": "postTopic",
+          "label": "What is this post about?",
+          "type": "text",
+          "placeholder": "e.g., New product launch, Behind the scenes, Customer story",
+          "required": true,
+          "validation": {
+            "minLength": 5,
+            "maxLength": 200
+          }
+        },
+        {
+          "id": "main-message",
+          "name": "mainMessage",
+          "label": "Main Message",
+          "type": "textarea",
+          "placeholder": "What's the key message you want to convey?",
+          "required": true,
+          "validation": {
+            "minLength": 10,
+            "maxLength": 500
+          },
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "id": "business-info",
+      "title": "Business Details",
+      "description": "Tell us about your business",
+      "order": 2,
+      "fields": [
+        {
+          "id": "business-name",
+          "name": "businessName",
+          "label": "Business Name",
+          "type": "text",
+          "placeholder": "Your business name",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        {
+          "id": "industry",
+          "name": "industry",
+          "label": "Industry",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "retail", "label": "Retail"},
+            {"value": "food-beverage", "label": "Food & Beverage"},
+            {"value": "health-wellness", "label": "Health & Wellness"},
+            {"value": "professional-services", "label": "Professional Services"},
+            {"value": "technology", "label": "Technology"},
+            {"value": "other", "label": "Other"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engagement",
+      "title": "Engagement Options",
+      "description": "How do you want followers to engage?",
+      "order": 3,
+      "fields": [
+        {
+          "id": "engagement-goal",
+          "name": "engagementGoal",
+          "label": "Primary Goal",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "awareness", "label": "Brand Awareness"},
+            {"value": "engagement", "label": "Likes & Comments"},
+            {"value": "traffic", "label": "Website Traffic"},
+            {"value": "sales", "label": "Sales/Conversions"}
+          ],
+          "defaultValue": "engagement"
+        },
+        {
+          "id": "include-question",
+          "name": "includeQuestion",
+          "label": "Include an engagement question",
+          "type": "checkbox",
+          "defaultValue": true
+        }
+      ]
+    }
+  ],
+  "validationRules": [],
+  "domainKnowledgeRefs": [
+    "social-media-guidelines",
+    "marketing-best-practices"
+  ],
+  "outputFormat": {
+    "structure": "story-value-cta",
+    "variationCount": 3,
+    "maxLength": 500,
+    "includeEmoji": true
+  },
+  "requiredDisclaimers": []
+}

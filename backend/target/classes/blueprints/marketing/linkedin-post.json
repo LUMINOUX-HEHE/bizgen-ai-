@@ -1,0 +1,135 @@
+{
+  "templateId": "tpl-linkedin",
+  "version": "1.0.0",
+  "metaPrompt": {
+    "systemInstruction": "You are a LinkedIn content strategist specializing in thought leadership and professional networking content.",
+    "roleDefinition": "Create professional, insightful LinkedIn posts that establish authority and drive meaningful engagement in the business community.",
+    "outputConstraints": "Optimal length is 150-300 words. First line should be a hook. Use line breaks for readability. Include relevant professional insights.",
+    "styleGuidelines": "Be professional but personable. Share insights and lessons learned. Use data and examples when possible. Avoid being overly promotional.",
+    "variables": {
+      "platform": "LinkedIn",
+      "optimalLength": "150-300 words"
+    }
+  },
+  "sections": [
+    {
+      "id": "topic",
+      "title": "Topic & Insight",
+      "description": "What professional insight do you want to share?",
+      "order": 1,
+      "fields": [
+        {
+          "id": "main-topic",
+          "name": "mainTopic",
+          "label": "Topic/Theme",
+          "type": "text",
+          "placeholder": "e.g., Leadership lessons, Industry trends, Career advice",
+          "required": true,
+          "validation": {
+            "minLength": 5,
+            "maxLength": 150
+          }
+        },
+        {
+          "id": "key-insight",
+          "name": "keyInsight",
+          "label": "Key Insight or Message",
+          "type": "textarea",
+          "placeholder": "What's the main takeaway you want readers to have?",
+          "required": true,
+          "validation": {
+            "minLength": 20,
+            "maxLength": 500
+          },
+          "rows": 4
+        },
+        {
+          "id": "personal-experience",
+          "name": "personalExperience",
+          "label": "Personal Experience or Example",
+          "type": "textarea",
+          "placeholder": "Share a relevant experience or example that illustrates your point",
+          "required": false,
+          "validation": {
+            "maxLength": 500
+          },
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "author-info",
+      "title": "About You",
+      "description": "Help us personalize the content",
+      "order": 2,
+      "fields": [
+        {
+          "id": "role",
+          "name": "authorRole",
+          "label": "Your Role/Title",
+          "type": "text",
+          "placeholder": "e.g., CEO, Marketing Director, Entrepreneur",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        {
+          "id": "industry-focus",
+          "name": "industryFocus",
+          "label": "Industry Focus",
+          "type": "text",
+          "placeholder": "e.g., SaaS, Healthcare, Finance",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "style",
+      "title": "Post Style",
+      "description": "Customize the approach",
+      "order": 3,
+      "fields": [
+        {
+          "id": "post-style",
+          "name": "postStyle",
+          "label": "Content Style",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "story", "label": "Storytelling"},
+            {"value": "listicle", "label": "List/Tips Format"},
+            {"value": "opinion", "label": "Opinion/Commentary"},
+            {"value": "how-to", "label": "How-To/Educational"},
+            {"value": "question", "label": "Thought-Provoking Question"}
+          ],
+          "defaultValue": "story"
+        },
+        {
+          "id": "include-cta",
+          "name": "includeCta",
+          "label": "Include call-to-action for comments",
+          "type": "checkbox",
+          "defaultValue": true
+        }
+      ]
+    }
+  ],
+  "validationRules": [],
+  "domainKnowledgeRefs": [
+    "social-media-guidelines",
+    "marketing-best-practices"
+  ],
+  "outputFormat": {
+    "structure": "hook-story-insight-cta",
+    "variationCount": 3,
+    "maxLength": 3000,
+    "includeEmoji": false
+  },
+  "requiredDisclaimers": []
+}

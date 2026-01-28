@@ -1,0 +1,148 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.bizgenai:bizgen-ai >-----------------------
+[INFO] Building BizGen AI 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.4:run (default-cli) > test-compile @ bizgen-ai >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ bizgen-ai ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 12 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ bizgen-ai ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ bizgen-ai ---
+[INFO] skip non existing resourceDirectory C:\Users\Sahil\Videos\#10\BizGen AI project\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ bizgen-ai ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 9 source files with javac [debug release 17] to target\test-classes
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by lombok.permit.Permit
+WARNING: Please consider reporting this to the maintainers of class lombok.permit.Permit
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[INFO] 
+[INFO] <<< spring-boot:3.2.4:run (default-cli) < test-compile @ bizgen-ai <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.4:run (default-cli) @ bizgen-ai ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-01-28T17:25:58.785+05:30  INFO 8696 --- [bizgen-ai] [           main] com.bizgenai.BizGenAiApplication         : Starting BizGenAiApplication using Java 24.0.2 with PID 8696 (C:\Users\Sahil\Videos\#10\BizGen AI project\backend\target\classes started by Sahil in C:\Users\Sahil\Videos\#10\BizGen AI project\backend)
+2026-01-28T17:25:58.786+05:30 DEBUG 8696 --- [bizgen-ai] [           main] com.bizgenai.BizGenAiApplication         : Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-28T17:25:58.786+05:30  INFO 8696 --- [bizgen-ai] [           main] com.bizgenai.BizGenAiApplication         : The following 1 profile is active: "openrouter"
+2026-01-28T17:25:59.748+05:30  INFO 8696 --- [bizgen-ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-28T17:25:59.846+05:30  INFO 8696 --- [bizgen-ai] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 4 JPA repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/C:/Users/Sahil/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.19/tomcat-embed-core-10.1.19.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-01-28T17:26:00.568+05:30  INFO 8696 --- [bizgen-ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-01-28T17:26:00.584+05:30  INFO 8696 --- [bizgen-ai] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-28T17:26:00.584+05:30  INFO 8696 --- [bizgen-ai] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-28T17:26:00.659+05:30  INFO 8696 --- [bizgen-ai] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-28T17:26:00.659+05:30  INFO 8696 --- [bizgen-ai] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1818 ms
+2026-01-28T17:26:00.704+05:30  INFO 8696 --- [bizgen-ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-28T17:26:01.043+05:30  INFO 8696 --- [bizgen-ai] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/bizgenai user=SA
+2026-01-28T17:26:01.044+05:30  INFO 8696 --- [bizgen-ai] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-28T17:26:01.060+05:30  INFO 8696 --- [bizgen-ai] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/bizgenai'
+2026-01-28T17:26:01.215+05:30  INFO 8696 --- [bizgen-ai] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-28T17:26:01.281+05:30  INFO 8696 --- [bizgen-ai] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-01-28T17:26:01.323+05:30  INFO 8696 --- [bizgen-ai] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-28T17:26:01.598+05:30  INFO 8696 --- [bizgen-ai] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-28T17:26:01.658+05:30  WARN 8696 --- [bizgen-ai] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-28T17:26:02.922+05:30  INFO 8696 --- [bizgen-ai] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-28T17:26:02.978+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    alter table if exists domain_knowledge 
+       alter column content set data type CLOB
+2026-01-28T17:26:02.982+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    alter table if exists generation_variations 
+       alter column content set data type CLOB
+2026-01-28T17:26:02.983+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    alter table if exists generation_variations 
+       alter column placeholders set data type CLOB
+2026-01-28T17:26:02.984+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    alter table if exists generations 
+       alter column assembled_prompt set data type CLOB
+2026-01-28T17:26:02.984+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    alter table if exists generations 
+       alter column disclaimers set data type CLOB
+2026-01-28T17:26:02.985+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    alter table if exists generations 
+       alter column input_data set data type CLOB
+2026-01-28T17:26:02.985+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    alter table if exists generations 
+       alter column warnings set data type CLOB
+2026-01-28T17:26:02.997+05:30  INFO 8696 --- [bizgen-ai] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-28T17:26:03.508+05:30  INFO 8696 --- [bizgen-ai] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-28T17:26:04.135+05:30  INFO 8696 --- [bizgen-ai] [           main] c.b.service.DomainKnowledgeService       : Loading domain knowledge files from: classpath:domain-knowledge/
+2026-01-28T17:26:04.270+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    select
+        dk1_0.id 
+    from
+        domain_knowledge dk1_0 
+    where
+        dk1_0.reference_id=? 
+    fetch
+        first ? rows only
+2026-01-28T17:26:04.280+05:30 DEBUG 8696 --- [bizgen-ai] [           main] c.b.service.DomainKnowledgeService       : Domain knowledge already exists: gdpr-basics
+2026-01-28T17:26:04.282+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    select
+        dk1_0.id 
+    from
+        domain_knowledge dk1_0 
+    where
+        dk1_0.reference_id=? 
+    fetch
+        first ? rows only
+2026-01-28T17:26:04.284+05:30 DEBUG 8696 --- [bizgen-ai] [           main] c.b.service.DomainKnowledgeService       : Domain knowledge already exists: legal-disclaimers
+2026-01-28T17:26:04.287+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    select
+        dk1_0.id 
+    from
+        domain_knowledge dk1_0 
+    where
+        dk1_0.reference_id=? 
+    fetch
+        first ? rows only
+2026-01-28T17:26:04.287+05:30 DEBUG 8696 --- [bizgen-ai] [           main] c.b.service.DomainKnowledgeService       : Domain knowledge already exists: marketing-best-practices
+2026-01-28T17:26:04.290+05:30 DEBUG 8696 --- [bizgen-ai] [           main] org.hibernate.SQL                        : 
+    select
+        dk1_0.id 
+    from
+        domain_knowledge dk1_0 
+    where
+        dk1_0.reference_id=? 
+    fetch
+        first ? rows only
+2026-01-28T17:26:04.292+05:30 DEBUG 8696 --- [bizgen-ai] [           main] c.b.service.DomainKnowledgeService       : Domain knowledge already exists: social-media-guidelines
+2026-01-28T17:26:04.292+05:30  INFO 8696 --- [bizgen-ai] [           main] c.b.service.DomainKnowledgeService       : Loaded 4 domain knowledge files
+2026-01-28T17:26:04.298+05:30  INFO 8696 --- [bizgen-ai] [           main] com.bizgenai.guardrail.GuardrailEngine   : GuardrailEngine initialized with 4 rules
+2026-01-28T17:26:04.572+05:30  WARN 8696 --- [bizgen-ai] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-28T17:26:05.040+05:30  INFO 8696 --- [bizgen-ai] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2026-01-28T17:26:05.049+05:30  INFO 8696 --- [bizgen-ai] [           main] com.bizgenai.BizGenAiApplication         : Started BizGenAiApplication in 6.79 seconds (process running for 7.193)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  07:33 min
+[INFO] Finished at: 2026-01-28T17:33:24+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.2.4:run (default-cli) on project bizgen-ai: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

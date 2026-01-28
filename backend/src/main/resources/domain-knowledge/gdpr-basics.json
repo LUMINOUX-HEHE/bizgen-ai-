@@ -1,0 +1,49 @@
+{
+  "id": "gdpr-basics",
+  "version": "1.0.0",
+  "description": "Basic GDPR concepts for privacy policy generation (not legal advice)",
+  "overview": {
+    "fullName": "General Data Protection Regulation",
+    "applies": "Organizations processing personal data of EU residents",
+    "effectiveDate": "May 25, 2018"
+  },
+  "keyPrinciples": {
+    "lawfulness": "Data must be processed lawfully, fairly, and transparently",
+    "purpose": "Collected for specified, explicit, and legitimate purposes",
+    "minimization": "Collect only data that is necessary",
+    "accuracy": "Keep data accurate and up to date",
+    "storage": "Keep data only as long as necessary",
+    "security": "Process data securely"
+  },
+  "dataSubjectRights": {
+    "access": "Right to access their personal data",
+    "rectification": "Right to correct inaccurate data",
+    "erasure": "Right to deletion ('right to be forgotten')",
+    "restriction": "Right to restrict processing",
+    "portability": "Right to receive data in portable format",
+    "objection": "Right to object to processing",
+    "automatedDecisions": "Rights related to automated decision-making"
+  },
+  "legalBases": [
+    "Consent",
+    "Contractual necessity",
+    "Legal obligation",
+    "Vital interests",
+    "Public task",
+    "Legitimate interests"
+  ],
+  "privacyPolicyRequirements": [
+    "Identity and contact details of controller",
+    "Contact details of Data Protection Officer (if applicable)",
+    "Purposes and legal basis for processing",
+    "Categories of personal data",
+    "Recipients of personal data",
+    "International transfers",
+    "Retention periods",
+    "Data subject rights",
+    "Right to withdraw consent",
+    "Right to lodge complaint",
+    "Whether provision of data is statutory or contractual requirement"
+  ],
+  "disclaimer": "This information is for general educational purposes only and does not constitute legal advice. Consult a qualified legal professional for GDPR compliance."
+}

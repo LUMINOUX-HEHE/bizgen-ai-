@@ -1,0 +1,145 @@
+{
+  "templateId": "tpl-instagram",
+  "version": "1.0.0",
+  "metaPrompt": {
+    "systemInstruction": "You are a professional social media copywriter specializing in Instagram content for small businesses.",
+    "roleDefinition": "Create engaging, conversion-focused Instagram posts that resonate with the target audience while maintaining brand voice.",
+    "outputConstraints": "Keep posts under 2200 characters. Include relevant emoji usage. Structure with hook, value proposition, and call-to-action.",
+    "styleGuidelines": "Use short, punchy sentences. Create urgency without being pushy. Be authentic and relatable.",
+    "variables": {
+      "platform": "Instagram",
+      "maxLength": "2200",
+      "hashtagCount": "5-10"
+    }
+  },
+  "sections": [
+    {
+      "id": "product-info",
+      "title": "Product Information",
+      "description": "Tell us about what you're promoting",
+      "order": 1,
+      "fields": [
+        {
+          "id": "product-name",
+          "name": "productName",
+          "label": "Product/Service Name",
+          "type": "text",
+          "placeholder": "e.g., Summer Skincare Bundle",
+          "helpText": "The main product or service you're promoting",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        {
+          "id": "key-benefits",
+          "name": "keyBenefits",
+          "label": "Key Benefits",
+          "type": "textarea",
+          "placeholder": "List 2-3 main benefits of your product",
+          "helpText": "What makes your product special?",
+          "required": true,
+          "validation": {
+            "minLength": 10,
+            "maxLength": 500
+          },
+          "rows": 3
+        },
+        {
+          "id": "price-info",
+          "name": "priceInfo",
+          "label": "Price or Offer",
+          "type": "text",
+          "placeholder": "e.g., $49.99 or 20% off",
+          "required": false,
+          "validation": {
+            "maxLength": 50
+          }
+        }
+      ]
+    },
+    {
+      "id": "audience",
+      "title": "Target Audience",
+      "description": "Help us understand who you're trying to reach",
+      "order": 2,
+      "fields": [
+        {
+          "id": "target-audience",
+          "name": "targetAudience",
+          "label": "Who is this for?",
+          "type": "text",
+          "placeholder": "e.g., Busy moms, fitness enthusiasts",
+          "required": true,
+          "validation": {
+            "minLength": 5,
+            "maxLength": 200
+          }
+        },
+        {
+          "id": "tone",
+          "name": "tone",
+          "label": "Desired Tone",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "professional", "label": "Professional"},
+            {"value": "casual", "label": "Casual & Friendly"},
+            {"value": "exciting", "label": "Exciting & Energetic"},
+            {"value": "luxurious", "label": "Luxurious & Premium"},
+            {"value": "playful", "label": "Playful & Fun"}
+          ],
+          "defaultValue": "casual"
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "title": "Additional Details",
+      "description": "Optional information to enhance your post",
+      "order": 3,
+      "fields": [
+        {
+          "id": "cta",
+          "name": "callToAction",
+          "label": "Call to Action",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "shop-now", "label": "Shop Now"},
+            {"value": "learn-more", "label": "Learn More"},
+            {"value": "link-in-bio", "label": "Link in Bio"},
+            {"value": "dm-us", "label": "DM Us"},
+            {"value": "limited-time", "label": "Limited Time Offer"}
+          ],
+          "defaultValue": "link-in-bio"
+        },
+        {
+          "id": "hashtags",
+          "name": "includeHashtags",
+          "label": "Include Hashtag Suggestions",
+          "type": "checkbox",
+          "defaultValue": true
+        }
+      ]
+    }
+  ],
+  "validationRules": [
+    {
+      "type": "required_together",
+      "fields": ["productName", "keyBenefits"]
+    }
+  ],
+  "domainKnowledgeRefs": [
+    "social-media-guidelines",
+    "marketing-best-practices"
+  ],
+  "outputFormat": {
+    "structure": "hook-body-cta",
+    "variationCount": 3,
+    "maxLength": 2200,
+    "includeEmoji": true
+  },
+  "requiredDisclaimers": []
+}

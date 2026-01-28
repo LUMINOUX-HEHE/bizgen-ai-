@@ -1,0 +1,9 @@
+com\bizgenai\controller\GenerationControllerIntegrationTest.class
+com\bizgenai\guardrail\LegalComplianceRuleTest.class
+com\bizgenai\controller\CategoryControllerTest.class
+com\bizgenai\controller\TemplateControllerTest.class
+com\bizgenai\guardrail\PlaceholderDetectionRuleTest.class
+com\bizgenai\service\GenerationServiceTest.class
+com\bizgenai\BizGenAiApplicationTests.class
+com\bizgenai\service\GuardrailServiceTest.class
+com\bizgenai\controller\HealthControllerTest.class

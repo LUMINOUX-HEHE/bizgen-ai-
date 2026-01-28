@@ -1,0 +1,136 @@
+{
+  "templateId": "tpl-email",
+  "version": "1.0.0",
+  "metaPrompt": {
+    "systemInstruction": "You are an email marketing specialist who creates engaging newsletters that drive opens, clicks, and conversions.",
+    "roleDefinition": "Create compelling email newsletters with attention-grabbing subject lines and valuable content that subscribers want to read.",
+    "outputConstraints": "Include subject line, preheader text, and body. Keep paragraphs short. Include clear CTA. Optimize for mobile reading.",
+    "styleGuidelines": "Be conversational and personal. Provide value before asking for action. Use scannable formatting. Create urgency without being pushy.",
+    "variables": {
+      "platform": "Email",
+      "subjectLineLength": "40-60 characters"
+    }
+  },
+  "sections": [
+    {
+      "id": "newsletter-content",
+      "title": "Newsletter Content",
+      "description": "What's in this newsletter?",
+      "order": 1,
+      "fields": [
+        {
+          "id": "main-topic",
+          "name": "mainTopic",
+          "label": "Main Topic/Theme",
+          "type": "text",
+          "placeholder": "e.g., Monthly update, Product launch, Special offer",
+          "required": true,
+          "validation": {
+            "minLength": 5,
+            "maxLength": 150
+          }
+        },
+        {
+          "id": "key-content",
+          "name": "keyContent",
+          "label": "Key Content/Message",
+          "type": "textarea",
+          "placeholder": "What are the main points you want to cover?",
+          "required": true,
+          "validation": {
+            "minLength": 20,
+            "maxLength": 1000
+          },
+          "rows": 5
+        },
+        {
+          "id": "offer",
+          "name": "specialOffer",
+          "label": "Special Offer (if any)",
+          "type": "text",
+          "placeholder": "e.g., 20% off with code SAVE20",
+          "required": false,
+          "validation": {
+            "maxLength": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "audience",
+      "title": "Audience",
+      "description": "Who are you sending this to?",
+      "order": 2,
+      "fields": [
+        {
+          "id": "subscriber-type",
+          "name": "subscriberType",
+          "label": "Subscriber Segment",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "all", "label": "All Subscribers"},
+            {"value": "new", "label": "New Subscribers"},
+            {"value": "active", "label": "Active Customers"},
+            {"value": "inactive", "label": "Inactive/Win-back"},
+            {"value": "vip", "label": "VIP/Loyal Customers"}
+          ],
+          "defaultValue": "all"
+        },
+        {
+          "id": "reader-name",
+          "name": "readerName",
+          "label": "Use personalization (first name)?",
+          "type": "checkbox",
+          "defaultValue": true
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "title": "Call to Action",
+      "description": "What do you want readers to do?",
+      "order": 3,
+      "fields": [
+        {
+          "id": "primary-cta",
+          "name": "primaryCta",
+          "label": "Primary Action",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "shop", "label": "Shop Now"},
+            {"value": "read", "label": "Read More"},
+            {"value": "book", "label": "Book Appointment"},
+            {"value": "reply", "label": "Reply to Email"},
+            {"value": "register", "label": "Register/Sign Up"},
+            {"value": "download", "label": "Download"}
+          ],
+          "defaultValue": "shop"
+        },
+        {
+          "id": "cta-url",
+          "name": "ctaUrl",
+          "label": "CTA Link",
+          "type": "text",
+          "placeholder": "https://your-website.com/page",
+          "required": false,
+          "validation": {
+            "pattern": "^https?://.*"
+          }
+        }
+      ]
+    }
+  ],
+  "validationRules": [],
+  "domainKnowledgeRefs": [
+    "marketing-best-practices"
+  ],
+  "outputFormat": {
+    "structure": "subject-preheader-greeting-body-cta-signature",
+    "variationCount": 3,
+    "maxLength": 5000,
+    "includeEmoji": true
+  },
+  "requiredDisclaimers": []
+}

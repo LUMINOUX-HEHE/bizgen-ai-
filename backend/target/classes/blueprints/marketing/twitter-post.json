@@ -1,0 +1,105 @@
+{
+  "templateId": "tpl-twitter",
+  "version": "1.0.0",
+  "metaPrompt": {
+    "systemInstruction": "You are a Twitter/X content specialist who creates viral, engaging short-form content for brands.",
+    "roleDefinition": "Create punchy, engaging tweets that capture attention quickly and drive engagement within character limits.",
+    "outputConstraints": "Maximum 280 characters. Make every word count. Use hooks that stop the scroll. Optional hashtags (max 2).",
+    "styleGuidelines": "Be concise and impactful. Use wit when appropriate. Create shareability. Consider thread potential.",
+    "variables": {
+      "platform": "Twitter/X",
+      "maxLength": "280"
+    }
+  },
+  "sections": [
+    {
+      "id": "tweet-content",
+      "title": "Tweet Content",
+      "description": "What do you want to tweet about?",
+      "order": 1,
+      "fields": [
+        {
+          "id": "topic",
+          "name": "tweetTopic",
+          "label": "Topic",
+          "type": "text",
+          "placeholder": "e.g., Product announcement, Industry hot take, Tip",
+          "required": true,
+          "validation": {
+            "minLength": 3,
+            "maxLength": 100
+          }
+        },
+        {
+          "id": "key-message",
+          "name": "keyMessage",
+          "label": "Key Message",
+          "type": "textarea",
+          "placeholder": "What's the core message? (We'll condense it)",
+          "required": true,
+          "validation": {
+            "minLength": 10,
+            "maxLength": 300
+          },
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "id": "style",
+      "title": "Tweet Style",
+      "description": "How should the tweet feel?",
+      "order": 2,
+      "fields": [
+        {
+          "id": "tweet-type",
+          "name": "tweetType",
+          "label": "Tweet Type",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "announcement", "label": "Announcement"},
+            {"value": "tip", "label": "Quick Tip"},
+            {"value": "question", "label": "Engaging Question"},
+            {"value": "hot-take", "label": "Hot Take/Opinion"},
+            {"value": "promotion", "label": "Promotion"}
+          ],
+          "defaultValue": "tip"
+        },
+        {
+          "id": "tone",
+          "name": "tweetTone",
+          "label": "Tone",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "professional", "label": "Professional"},
+            {"value": "witty", "label": "Witty/Clever"},
+            {"value": "bold", "label": "Bold/Provocative"},
+            {"value": "friendly", "label": "Friendly/Casual"},
+            {"value": "informative", "label": "Informative"}
+          ],
+          "defaultValue": "witty"
+        },
+        {
+          "id": "include-hashtags",
+          "name": "includeHashtags",
+          "label": "Include hashtags (max 2)",
+          "type": "checkbox",
+          "defaultValue": false
+        }
+      ]
+    }
+  ],
+  "validationRules": [],
+  "domainKnowledgeRefs": [
+    "social-media-guidelines"
+  ],
+  "outputFormat": {
+    "structure": "hook-punch",
+    "variationCount": 3,
+    "maxLength": 280,
+    "includeEmoji": true
+  },
+  "requiredDisclaimers": []
+}

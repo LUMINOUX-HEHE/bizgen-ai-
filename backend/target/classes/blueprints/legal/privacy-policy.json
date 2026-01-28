@@ -1,0 +1,188 @@
+{
+  "templateId": "tpl-privacy",
+  "version": "1.0.0",
+  "metaPrompt": {
+    "systemInstruction": "You are a legal document drafting assistant. Generate privacy policy drafts based on provided business information. These are DRAFTS ONLY and require legal review.",
+    "roleDefinition": "Create comprehensive, readable privacy policy drafts that cover standard data protection requirements.",
+    "outputConstraints": "Use clear, plain language. Organize into logical sections. Include placeholders for specific details not provided. Never claim compliance with specific regulations.",
+    "styleGuidelines": "Professional but accessible. Avoid excessive legal jargon. Use headers and bullet points for readability.",
+    "variables": {
+      "documentType": "Privacy Policy",
+      "isLegalDocument": "true",
+      "requiresReview": "true"
+    }
+  },
+  "sections": [
+    {
+      "id": "company-info",
+      "title": "Company Information",
+      "description": "Basic information about your business",
+      "order": 1,
+      "fields": [
+        {
+          "id": "company-name",
+          "name": "companyName",
+          "label": "Company/Business Name",
+          "type": "text",
+          "placeholder": "e.g., Acme Corporation",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 200
+          }
+        },
+        {
+          "id": "website-url",
+          "name": "websiteUrl",
+          "label": "Website URL",
+          "type": "text",
+          "placeholder": "e.g., https://www.example.com",
+          "required": true,
+          "validation": {
+            "pattern": "^https?://.*"
+          }
+        },
+        {
+          "id": "contact-email",
+          "name": "contactEmail",
+          "label": "Contact Email for Privacy Inquiries",
+          "type": "text",
+          "placeholder": "e.g., privacy@example.com",
+          "required": true,
+          "validation": {
+            "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+          }
+        }
+      ]
+    },
+    {
+      "id": "data-collection",
+      "title": "Data Collection Practices",
+      "description": "What information do you collect from users?",
+      "order": 2,
+      "fields": [
+        {
+          "id": "data-types",
+          "name": "dataTypesCollected",
+          "label": "Types of Data Collected",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            {"value": "name", "label": "Name"},
+            {"value": "email", "label": "Email Address"},
+            {"value": "phone", "label": "Phone Number"},
+            {"value": "address", "label": "Physical Address"},
+            {"value": "payment", "label": "Payment Information"},
+            {"value": "usage", "label": "Website Usage Data"},
+            {"value": "cookies", "label": "Cookies & Tracking"},
+            {"value": "device", "label": "Device Information"},
+            {"value": "location", "label": "Location Data"}
+          ]
+        },
+        {
+          "id": "collection-methods",
+          "name": "collectionMethods",
+          "label": "How do you collect this data?",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            {"value": "forms", "label": "Web Forms"},
+            {"value": "account", "label": "Account Registration"},
+            {"value": "purchase", "label": "Purchases"},
+            {"value": "automatic", "label": "Automatic Collection"},
+            {"value": "third-party", "label": "Third-Party Sources"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-usage",
+      "title": "Data Usage",
+      "description": "How do you use the collected data?",
+      "order": 3,
+      "fields": [
+        {
+          "id": "usage-purposes",
+          "name": "usagePurposes",
+          "label": "Purposes for Data Use",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            {"value": "service", "label": "Provide Services"},
+            {"value": "communication", "label": "Communication"},
+            {"value": "marketing", "label": "Marketing"},
+            {"value": "analytics", "label": "Analytics"},
+            {"value": "personalization", "label": "Personalization"},
+            {"value": "legal", "label": "Legal Compliance"},
+            {"value": "security", "label": "Security"}
+          ]
+        },
+        {
+          "id": "third-party-sharing",
+          "name": "thirdPartySharing",
+          "label": "Do you share data with third parties?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            {"value": "yes", "label": "Yes"},
+            {"value": "no", "label": "No"},
+            {"value": "limited", "label": "Limited/Service Providers Only"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "user-rights",
+      "title": "User Rights",
+      "description": "What rights do users have regarding their data?",
+      "order": 4,
+      "fields": [
+        {
+          "id": "applicable-regions",
+          "name": "applicableRegions",
+          "label": "Where are your users primarily located?",
+          "type": "multiselect",
+          "helpText": "This helps determine which regulations may apply",
+          "required": true,
+          "options": [
+            {"value": "us", "label": "United States"},
+            {"value": "eu", "label": "European Union"},
+            {"value": "uk", "label": "United Kingdom"},
+            {"value": "canada", "label": "Canada"},
+            {"value": "australia", "label": "Australia"},
+            {"value": "global", "label": "Global/Multiple Regions"}
+          ]
+        }
+      ]
+    }
+  ],
+  "validationRules": [
+    {
+      "type": "required",
+      "fields": ["companyName", "websiteUrl", "contactEmail"]
+    }
+  ],
+  "domainKnowledgeRefs": [
+    "gdpr-basics",
+    "legal-disclaimers"
+  ],
+  "outputFormat": {
+    "structure": "legal-document",
+    "variationCount": 3,
+    "sections": [
+      "Introduction",
+      "Information We Collect",
+      "How We Use Your Information",
+      "Information Sharing",
+      "Data Security",
+      "Your Rights",
+      "Contact Us",
+      "Changes to This Policy"
+    ]
+  },
+  "requiredDisclaimers": [
+    "DRAFT_ONLY",
+    "LEGAL_REVIEW_REQUIRED",
+    "NOT_LEGAL_ADVICE"
+  ]
+}

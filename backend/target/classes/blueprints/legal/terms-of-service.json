@@ -1,0 +1,252 @@
+{
+  "templateId": "tpl-terms",
+  "version": "1.0.0",
+  "metaPrompt": {
+    "systemInstruction": "You are a legal document drafting assistant. Generate terms of service drafts based on provided business information. These are DRAFTS ONLY and require legal review.",
+    "roleDefinition": "Create comprehensive terms of service drafts that cover standard provisions for websites and online services.",
+    "outputConstraints": "Use clear language while maintaining legal precision. Organize into logical sections. Include placeholders for specific details. Never guarantee legal enforceability.",
+    "styleGuidelines": "Professional and formal. Use defined terms consistently. Include necessary legal provisions while remaining readable.",
+    "variables": {
+      "documentType": "Terms of Service",
+      "isLegalDocument": "true",
+      "requiresReview": "true"
+    }
+  },
+  "sections": [
+    {
+      "id": "company-info",
+      "title": "Company Information",
+      "description": "Basic information about your business",
+      "order": 1,
+      "fields": [
+        {
+          "id": "company-name",
+          "name": "companyName",
+          "label": "Company/Business Name",
+          "type": "text",
+          "placeholder": "e.g., Acme Corporation",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 200
+          }
+        },
+        {
+          "id": "website-url",
+          "name": "websiteUrl",
+          "label": "Website URL",
+          "type": "text",
+          "placeholder": "e.g., https://www.example.com",
+          "required": true,
+          "validation": {
+            "pattern": "^https?://.*"
+          }
+        },
+        {
+          "id": "contact-email",
+          "name": "contactEmail",
+          "label": "Contact Email",
+          "type": "text",
+          "placeholder": "e.g., legal@example.com",
+          "required": true,
+          "validation": {
+            "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+          }
+        },
+        {
+          "id": "jurisdiction",
+          "name": "jurisdiction",
+          "label": "Governing Law Jurisdiction",
+          "type": "text",
+          "placeholder": "e.g., State of California, USA",
+          "helpText": "The legal jurisdiction that will govern these terms",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "service-description",
+      "title": "Service Description",
+      "description": "Describe your services",
+      "order": 2,
+      "fields": [
+        {
+          "id": "service-type",
+          "name": "serviceType",
+          "label": "Type of Service",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "ecommerce", "label": "E-commerce/Online Store"},
+            {"value": "saas", "label": "Software as a Service (SaaS)"},
+            {"value": "marketplace", "label": "Marketplace/Platform"},
+            {"value": "content", "label": "Content/Information Site"},
+            {"value": "community", "label": "Community/Social Platform"},
+            {"value": "service", "label": "Professional Services"}
+          ]
+        },
+        {
+          "id": "service-description",
+          "name": "serviceDescription",
+          "label": "Brief Service Description",
+          "type": "textarea",
+          "placeholder": "Describe what your website or service offers",
+          "required": true,
+          "validation": {
+            "minLength": 20,
+            "maxLength": 500
+          },
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "id": "user-requirements",
+      "title": "User Requirements",
+      "description": "Requirements for using your service",
+      "order": 3,
+      "fields": [
+        {
+          "id": "minimum-age",
+          "name": "minimumAge",
+          "label": "Minimum Age Requirement",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "13", "label": "13 years old"},
+            {"value": "16", "label": "16 years old"},
+            {"value": "18", "label": "18 years old"},
+            {"value": "21", "label": "21 years old"}
+          ],
+          "defaultValue": "18"
+        },
+        {
+          "id": "account-required",
+          "name": "accountRequired",
+          "label": "Is account registration required?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            {"value": "yes", "label": "Yes"},
+            {"value": "no", "label": "No"},
+            {"value": "optional", "label": "Optional"}
+          ]
+        },
+        {
+          "id": "prohibited-uses",
+          "name": "prohibitedUses",
+          "label": "Select prohibited uses",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            {"value": "illegal", "label": "Illegal Activities"},
+            {"value": "harmful", "label": "Harmful Content"},
+            {"value": "spam", "label": "Spam/Unsolicited Messages"},
+            {"value": "impersonation", "label": "Impersonation"},
+            {"value": "infringement", "label": "IP Infringement"},
+            {"value": "scraping", "label": "Data Scraping"},
+            {"value": "reverse-engineering", "label": "Reverse Engineering"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "payments",
+      "title": "Payments & Refunds",
+      "description": "Payment and refund policies",
+      "order": 4,
+      "fields": [
+        {
+          "id": "has-payments",
+          "name": "hasPayments",
+          "label": "Does your service involve payments?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            {"value": "yes", "label": "Yes"},
+            {"value": "no", "label": "No"}
+          ]
+        },
+        {
+          "id": "refund-policy",
+          "name": "refundPolicy",
+          "label": "Refund Policy",
+          "type": "select",
+          "required": false,
+          "options": [
+            {"value": "full-30", "label": "Full refund within 30 days"},
+            {"value": "full-14", "label": "Full refund within 14 days"},
+            {"value": "partial", "label": "Partial refunds available"},
+            {"value": "no-refunds", "label": "No refunds"},
+            {"value": "case-by-case", "label": "Case-by-case basis"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "liability",
+      "title": "Liability & Disclaimers",
+      "description": "Limitation of liability provisions",
+      "order": 5,
+      "fields": [
+        {
+          "id": "liability-cap",
+          "name": "liabilityCap",
+          "label": "Liability Limitation",
+          "type": "select",
+          "required": true,
+          "options": [
+            {"value": "fees-paid", "label": "Limited to fees paid"},
+            {"value": "fixed-amount", "label": "Fixed dollar amount"},
+            {"value": "no-liability", "label": "No liability (where permitted)"}
+          ],
+          "defaultValue": "fees-paid"
+        },
+        {
+          "id": "warranty-disclaimer",
+          "name": "warrantyDisclaimer",
+          "label": "Include warranty disclaimer?",
+          "type": "checkbox",
+          "defaultValue": true
+        }
+      ]
+    }
+  ],
+  "validationRules": [
+    {
+      "type": "required",
+      "fields": ["companyName", "websiteUrl", "contactEmail", "jurisdiction"]
+    }
+  ],
+  "domainKnowledgeRefs": [
+    "legal-disclaimers"
+  ],
+  "outputFormat": {
+    "structure": "legal-document",
+    "variationCount": 3,
+    "sections": [
+      "Agreement to Terms",
+      "Description of Services",
+      "User Accounts",
+      "User Conduct",
+      "Intellectual Property",
+      "Payment Terms",
+      "Disclaimers",
+      "Limitation of Liability",
+      "Indemnification",
+      "Termination",
+      "Governing Law",
+      "Changes to Terms",
+      "Contact Information"
+    ]
+  },
+  "requiredDisclaimers": [
+    "DRAFT_ONLY",
+    "LEGAL_REVIEW_REQUIRED",
+    "NOT_LEGAL_ADVICE"
+  ]
+}
