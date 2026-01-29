@@ -2,6 +2,55 @@
 
 A template-driven content generation platform for SMB owners. Generate Privacy Policies, Terms of Service, marketing content, and more—powered by AI.
 
+# BizGen AI – User Guide
+
+BizGen AI helps you quickly generate professional content such as Privacy Policies, Terms of Service, marketing copy, and more, tailored for your business. This guide explains how to use the product as an end user.
+
+## Getting Started
+1. **Open BizGen AI in your browser.**
+2. **Landing Page:**
+   - Read about the product’s features and benefits.
+   - Click **Get Started** to begin.
+
+## Dashboard
+- View a summary of your recent content generations and categories.
+- Click **Create New Content** to start generating content.
+
+## Selecting a Category & Template
+1. **Choose a Category** (e.g., Legal, Marketing).
+2. **Browse Templates** for the selected category (e.g., Privacy Policy, Social Media Post).
+3. Click on a template to proceed.
+
+## Filling the Form
+- Each template provides a dynamic form.
+- Enter your business details and answer the questions.
+- Required fields are marked. Tooltips and help text are available for guidance.
+
+## Generating Content
+1. Click **Generate** after filling the form.
+2. The AI will process your request (may take up to 2 minutes for long documents).
+3. Once ready, you’ll see multiple content variations.
+
+## Reviewing & Using Output
+- Review the generated content.
+- Use the **Copy** button to copy any variation.
+- For legal documents, review carefully before publishing.
+
+## History
+- Access your previous generations from the **History** page.
+- View, copy, or delete past results.
+
+## Compliance & Guardrails
+- BizGen AI includes built-in checks for legal and content safety.
+- Warnings or disclaimers are shown if content may need review.
+
+## Support
+- For help, feedback, or issues, contact the support team (see website footer or contact section).
+
+---
+
+**BizGen AI is a productivity tool. Always review AI-generated legal or sensitive content with a professional before use.**
+
 ## Features
 - Modern React + Vite frontend with Tailwind CSS
 - Spring Boot backend with modular architecture
